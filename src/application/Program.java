@@ -2,6 +2,10 @@ package application;
 
 import java.util.Locale;
 import java.util.Scanner;
+import entities.Worker;
+
+import entities.Department;
+import entities.enums.WorkerLevel;
 
 public class Program {
 
@@ -10,8 +14,18 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		
 		System.out.print("Enter department's name:");
-		String name = sc.next();
+		String departmentName = sc.nextLine();
 		
+		System.out.print("Enter worker data: ");
+		
+		System.out.print("Name: ");
+		String workerName = sc.nextLine();
+		System.out.print("Level: ");
+		String workerLevel = sc.nextLine();
+		System.out.print("Base salary: ");
+		double baseSalary = sc.nextDouble();
+		
+		Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), baseSalary, new Department(departmentName));
 		
 		
 		sc.close();
