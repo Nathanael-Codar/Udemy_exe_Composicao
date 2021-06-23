@@ -59,7 +59,7 @@ public class Worker {
 		this.baseSalary = baseSalary;
 	}
 	
-//	Métodos Resposaveis para contratos de Add e Remove.
+//	Métodos Resposáveis para contratos de Add e Remove.
 	public void addContract(HourContract contract) {
 		contracts.add(contract);
 	}
